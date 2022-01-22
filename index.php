@@ -1,0 +1,39 @@
+<?php 
+
+    require('conexion.php');
+    
+    $sql="SELECT nombre, continente from pais";
+    $result=mysqli_query($conexion,$sql);
+
+ ?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD 7</title>
+</head>
+<body>
+    <table border="1" >
+        <tr>
+			<td>Nombre</td>
+			<td>Continente</td>	
+		</tr>
+
+		<?php 
+		while($mostrar=mysqli_fetch_array($result)){
+		 ?>
+
+		<tr>
+			<td><?php echo $mostrar['nombre'] ?></td>
+			<td><?php echo $mostrar['continente'] ?></td>
+		</tr>
+	<?php 
+	}
+	 ?>
+	</table>
+
+</body>
+</html>
