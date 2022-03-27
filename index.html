@@ -1,12 +1,3 @@
-<?php 
-
-    require('conexion.php');
-    
-    $sql="SELECT nombre, continente from pais";
-    $result=mysqli_query($conexion,$sql);
-
- ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,6 +7,15 @@
     <title>UD 7</title>
 </head>
 <body>
+	<?php 
+
+    require('conexion.php');
+    
+    $sql="SELECT nombre, continente from pais";
+    $result=mysqli_query($conexion,$sql);
+
+ ?>
+
     <table border="1" >
         <tr>
 			<td>Nombre</td>
